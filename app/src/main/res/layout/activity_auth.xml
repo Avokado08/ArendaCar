@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#945ede"
+    tools:context=".AuthActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="170dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="Войдите в аккаунт"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:passwordToggleEnabled="true">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_login_auth"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Введите логин"
+            android:inputType="textPassword"
+            android:textColor="#ffffff"
+            android:textColorHint="#59585b" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--    <EditText-->
+<!--        android:id="@+id/user_login_auth"-->
+<!--        android:layout_width="220dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="text"-->
+<!--        android:textColorHint="#59585b"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:textColor="#ffffff"-->
+<!--        android:hint="Введите логин" />-->
+
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/user_pass"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textColorHint="#59585b"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:textColor="#ffffff"
+        android:hint="Введите пароль"
+/>
+
+
+    <Button
+        android:id="@+id/button_auth"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="Войти"
+        android:backgroundTint="#7e2ec9"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Нет аккаунта?"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        />
+    <TextView
+        android:id="@+id/link_to_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        android:fontFamily="@font/inter"
+        android:text="Зарегистрироваться"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        />
+
+
+</LinearLayout>
+
