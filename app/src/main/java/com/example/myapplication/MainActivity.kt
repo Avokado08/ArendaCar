@@ -1,12 +1,13 @@
 package com.example.myapplication
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var UserLogin: EditText
@@ -14,7 +15,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var UserPass: EditText
     private lateinit var Button: Button
     private lateinit var linkToAuth: TextView
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
         linkToAuth.setOnClickListener {
             val intent = Intent(this, AuthActivity::class.java)
             startActivity(intent)
-
         }
 
         Button.setOnClickListener {
@@ -39,6 +38,12 @@ class MainActivity : AppCompatActivity() {
 
             if (login.isEmpty() || email.isEmpty() || pass.isEmpty()) {
                 Toast.makeText(this, "Не все поля заполнены", Toast.LENGTH_LONG).show()
+            } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                Toast.makeText(this, "Введите корректный email", Toast.LENGTH_LONG).show()
+            } else if (login.length < 5) {
+                Toast.makeText(this, "Логин должен содержать минимум 5 символов", Toast.LENGTH_LONG).show()
+            } else if (!isPasswordComplexEnough(pass)) {
+                Toast.makeText(this, "Пароль должен содержать минимум 8 символов, одну заглавную букву и один спец. символ или цифру", Toast.LENGTH_LONG).show()
             } else {
                 val user = User(login, email, pass)
 
@@ -52,5 +57,10 @@ class MainActivity : AppCompatActivity() {
                 UserPass.text.clear()
             }
         }
+    }
+
+    private fun isPasswordComplexEnough(password: String): Boolean {
+        val passwordPattern = Regex("^(?=.*[A-Z])(?=.*[!@#\$%^&*(),.?\":{}|<>\\d]).{8,}\$")
+        return passwordPattern.containsMatchIn(password)
     }
 }

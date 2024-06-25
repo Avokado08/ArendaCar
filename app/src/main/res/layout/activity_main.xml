@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#945ede"
+    android:background="#FFFFFF"
     tools:context=".MainActivity"
     tools:ignore="ExtraText">
 
@@ -17,57 +17,79 @@
         android:layout_marginTop="170dp"
         android:fontFamily="@font/inter_bold"
         android:text="Создайте аккаунт"
-        android:textColor="#ffffff"
+        android:textColor="#002D72"
         android:textSize="25sp"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/user_login"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="220dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:inputType="text"
-        android:textColorHint="#59585b"
-        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textColor="#ffffff"
-        android:hint="Введите логин" />
+        >
 
-    <EditText
-        android:id="@+id/user_email"
-        android:layout_width="220dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:textColorHint="#59585b"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:textColor="#ffffff"
-        android:hint="Введите почту" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Введите логин"
+            android:textColor="#000000"
+            android:textColorHint="#59585b" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/user_pass"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="220dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:textColorHint="#59585b"
-        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textColor="#ffffff"
-        android:hint="Введите пароль" />
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Введите почту"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000"
+            android:textColorHint="#59585b" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/black">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/user_pass"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:textColorHint="#59585b"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textColor="#000000"
+            android:hint="Введите пароль" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/button_reg"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:text="Регистрация"
-        android:backgroundTint="#7e2ec9"
+        android:backgroundTint="#FFD700"
         android:textSize="16sp"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:textColor="#ffffff"
+        android:textColor="#A0A0A0"
         android:textStyle="bold"/>
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -84,7 +106,7 @@
         android:layout_gravity="center"
         android:fontFamily="@font/inter"
         android:text="Войти"
-        android:textColor="#ffffff"
+        android:textColor="#002D72"
         android:textSize="15sp" />
 
 

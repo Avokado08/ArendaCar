@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#945ede"
+    android:background="#FFFFFF"
     tools:context=".AuthActivity">
 
     <TextView
@@ -16,16 +16,16 @@
         android:layout_marginTop="170dp"
         android:fontFamily="@font/inter_bold"
         android:text="Войдите в аккаунт"
-        android:textColor="#ffffff"
+        android:textColor="#002D72"
         android:textSize="25sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        app:passwordToggleEnabled="true">
-
+        app:passwordToggleEnabled="false">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/user_login_auth"
@@ -34,8 +34,8 @@
             android:layout_marginTop="20dp"
             android:ems="10"
             android:hint="Введите логин"
-            android:inputType="textPassword"
-            android:textColor="#ffffff"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
             android:textColorHint="#59585b" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -51,7 +51,12 @@
 <!--        android:layout_gravity="center"-->
 <!--        android:textColor="#ffffff"-->
 <!--        android:hint="Введите логин" />-->
-
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/black">
 
 
     <com.google.android.material.textfield.TextInputEditText
@@ -63,9 +68,9 @@
         android:textColorHint="#59585b"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        android:textColor="#ffffff"
-        android:hint="Введите пароль"
-/>
+        android:textColor="#000000"
+        android:hint="Введите пароль" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 
     <Button
@@ -73,11 +78,11 @@
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:text="Войти"
-        android:backgroundTint="#7e2ec9"
+        android:backgroundTint="#FFD700"
         android:textSize="16sp"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:textColor="#ffffff"
+        android:textColor="#A0A0A0"
         android:textStyle="bold"/>
 
 
@@ -97,7 +102,7 @@
         android:layout_marginTop="1dp"
         android:fontFamily="@font/inter"
         android:text="Зарегистрироваться"
-        android:textColor="#ffffff"
+        android:textColor="#002D72"
         android:textSize="15sp"
         />
 
